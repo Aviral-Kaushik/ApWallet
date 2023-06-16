@@ -113,6 +113,25 @@
     <string name="block_current_card">Block Current Card</string>
     <string name="send_money_to_anyone">Send Money to Anyone</string>
     <string name="now_you_can_easily_send_money_to_any_account_on_the_world_using_apwallet">Now you can easily send money to any account \non the world using ApWallet</string>
+    <string name="account_details">Account Details</string>
+    <string name="payee_account_number">Payee Account Number</string>
+    <string name="enter_payee_account_number">Enter Payee Account Number</string>
+    <string name="re_enter_payee_account_number">Re-enter Payee Account Number</string>
+    <string name="ifse_code">IFSE Code</string>
+    <string name="enter_ifse_code">Enter IFSE Code</string>
+    <string name="enter_account_holder_name">Enter Account Holder Name</string>
+    <string name="transfer_details">Transfer Details</string>
+    <string name="enter_amount_to_be_transferred">Amount to be transferred</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="your_pin">Your PIN</string>
+    <string name="confirm_details">Confirm Details</string>
+    <string name="transfer_successful">Transfer Successful</string>
+    <string name="a_c_number">A/c Number</string>
+    <string name="_111464497089">111464497089</string>
+    <string name="sbin0002330">SBIN0002330</string>
+    <string name="rs_35_000">Rs. 35,000</string>
+    <string name="remark">Remark</string>
+    <string name="enter_remark_optional">Enter Remark (Optional)</string>
     <string-array name="card_type">
         <item>Visa</item>
         <item>Mastercard</item>

@@ -9,11 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.aviral.apwallet.databinding.FragmentBillTransactionBinding;
+import com.aviral.apwallet.Activities.SendMoneyActivity;
+import com.aviral.apwallet.databinding.FragmentBankTransferBinding;
 
 public class BankTransferFragment extends Fragment {
 
-    private FragmentBillTransactionBinding binding;
+    private FragmentBankTransferBinding binding;
 
     public BankTransferFragment() {
 
@@ -22,7 +23,7 @@ public class BankTransferFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentBillTransactionBinding.inflate(inflater, container, false);
+        binding = FragmentBankTransferBinding.inflate(inflater, container, false);
         // Inflate the layout for this fragment
         return binding.getRoot();
     }
@@ -30,5 +31,7 @@ public class BankTransferFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.btnConfirmDetails.setOnClickListener(view1 -> ((SendMoneyActivity) requireActivity()).showTransferSuccessFragment());
     }
 }

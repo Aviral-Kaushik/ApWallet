@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.aviral.apwallet.Activities.SendMoneyActivity;
 import com.aviral.apwallet.databinding.FragmentBankDetailsBinding;
 
 public class BankDetailsFragment extends Fragment {
@@ -30,5 +31,7 @@ public class BankDetailsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.btnNext.setOnClickListener(view1 -> ((SendMoneyActivity) requireActivity()).showBankTransferFragment());
     }
 }

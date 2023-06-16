@@ -1,5 +1,6 @@
 package com.aviral.apwallet.SendMoneyFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.aviral.apwallet.Activities.MainActivity;
 import com.aviral.apwallet.databinding.FragmentTransferSuccessBinding;
 
 public class TransferSuccessFragment extends Fragment {
@@ -30,5 +32,7 @@ public class TransferSuccessFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.btnBackToHome.setOnClickListener(view1 -> startActivity(new Intent(requireActivity(), MainActivity.class)));
     }
 }
