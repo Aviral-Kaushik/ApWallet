@@ -8,16 +8,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aviral.apwallet.Models.Contact;
 import com.aviral.apwallet.R;
 
 import java.util.ArrayList;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
 
-    private final ArrayList<Contact> transactions;
+    private final ArrayList<String> transactions;
 
-    public ContactsAdapter(ArrayList<Contact> transactions){
+    public ContactsAdapter(ArrayList<String> transactions){
         this.transactions = transactions;
     }
 
@@ -37,8 +36,8 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.contactName.setText(transactions.get(position).getContactName());
-        holder.contactNumber.setText(transactions.get(position).getContactNumber());
+        holder.contactName.setText(transactions.get(position));
+//        holder.contactNumber.setText(transactions.get(position).getContactNumber());
 
     }
 
@@ -50,13 +49,13 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView contactName;
-        public final TextView contactNumber;
+//        public final TextView contactNumber;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             contactName = itemView.findViewById(R.id.contact_name);
-            contactNumber = itemView.findViewById(R.id.contact_number);
+//            contactNumber = itemView.findViewById(R.id.contact_number);
 
         }
     }

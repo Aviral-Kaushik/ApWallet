@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment;
 
 import com.aviral.apwallet.Activities.AddMoneyActivity;
 import com.aviral.apwallet.Activities.BillPayActivity;
+import com.aviral.apwallet.Activities.CardActivity;
 import com.aviral.apwallet.Activities.RechargeActivity;
+import com.aviral.apwallet.Activities.SendMoneyActivity;
 import com.aviral.apwallet.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -43,6 +45,12 @@ public class HomeFragment extends Fragment {
 
         binding.btnBillPayment.setOnClickListener(view1 -> startActivity(
                 new Intent(requireContext(), BillPayActivity.class)));
+
+        binding.btnCards.setOnClickListener(view1 -> startActivity(
+                new Intent(requireContext(), CardActivity.class)));
+
+        binding.btnSendMoney.setOnClickListener(view1 -> startActivity(
+                new Intent(requireContext(), SendMoneyActivity.class)));
 
     }
 }

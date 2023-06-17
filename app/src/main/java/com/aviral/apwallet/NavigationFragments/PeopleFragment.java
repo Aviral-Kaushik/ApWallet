@@ -1,6 +1,7 @@
 package com.aviral.apwallet.NavigationFragments;
 
 import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -38,37 +39,40 @@ public class PeopleFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-//        setUpContactsAdapter();
+        setUpContactsAdapter();
 
     }
 
+    @SuppressLint("Range")
     private void setUpContactsAdapter() {
 
-        ArrayList<Contact> contacts = new ArrayList<>();
-
-        Cursor cursor = requireContext().getContentResolver().query(
-                ContactsContract.Contacts.CONTENT_URI,
-                null, null, null,
-                ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
-
-
-
-        if (cursor.getCount() > 0) {
-
-            while (cursor.moveToNext()) {
-
-                @SuppressLint("Range")
-                String name = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME_PRIMARY));
-                @SuppressLint("Range")
-                String phoneNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-
-                Contact contact = new Contact(name, phoneNumber);
-                contacts.add(contact);
-
+        ArrayList<String> nameList = new ArrayList<>();
+        ContentResolver cr = requireContext().getContentResolver();
+        Cursor cur = cr.query(ContactsContract.Contacts.CONTENT_URI,
+                null, null, null, null);
+        if ((cur != null ? cur.getCount() : 0) > 0) {
+            while (cur != null && cur.moveToNext()) {
+                @SuppressLint("Range") String id = cur.getString(
+                        cur.getColumnIndex(ContactsContract.Contacts._ID));
+                @SuppressLint("Range") String name = cur.getString(cur.getColumnIndex(
+                        ContactsContract.Contacts.DISPLAY_NAME));
+                nameList.add(name);
+                if (cur.getInt(cur.getColumnIndex( ContactsContract.Contacts.HAS_PHONE_NUMBER)) > 0) {
+                    Cursor pCur = cr.query(
+                            ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                            null,
+                            ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?",
+                            new String[]{id}, null);
+                    while (pCur.moveToNext()) {
+                        String phoneNo = pCur.getString(pCur.getColumnIndex(
+                                ContactsContract.CommonDataKinds.Phone.NUMBER));
+                    }
+                    pCur.close();
+                }
             }
-
-            cursor.close();
-
+        }
+        if (cur != null) {
+            cur.close();
         }
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
@@ -77,7 +81,7 @@ public class PeopleFragment extends Fragment {
 
         binding.contactsRecyclerView.setLayoutManager(linearLayoutManager);
 
-        ContactsAdapter contactsAdapter = new ContactsAdapter(contacts);
+        ContactsAdapter contactsAdapter = new ContactsAdapter(nameList);
 
         binding.contactsRecyclerView.setAdapter(contactsAdapter);
 

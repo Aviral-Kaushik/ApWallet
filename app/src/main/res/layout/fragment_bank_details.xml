@@ -48,23 +48,22 @@
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider16"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider16">
 
         <TextView
             android:id="@+id/textView62"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/payee_account_number"
             android:fontFamily="@font/montserrat"
+            android:text="@string/payee_account_number"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,18 +84,18 @@
                 android:id="@+id/edit_text_payee_account_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/account_edit_text_background"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/enter_payee_account_number"
-                android:background="@drawable/account_edit_text_background"
                 android:importantForAutofill="no"
                 android:inputType="numberPassword"
-                android:textSize="15sp"
-                android:layout_marginStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"/>
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -104,11 +103,11 @@
             android:id="@+id/textView63"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/re_enter_payee_account_number"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat"
+            android:text="@string/re_enter_payee_account_number"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,18 +128,18 @@
                 android:id="@+id/edit_text_re_enter_payee_account_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/account_edit_text_background"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/re_enter_payee_account_number"
-                android:background="@drawable/account_edit_text_background"
                 android:importantForAutofill="no"
                 android:inputType="numberPassword"
-                android:textSize="15sp"
-                android:layout_marginStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"/>
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -148,11 +147,11 @@
             android:id="@+id/textView64"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ifse_code"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat"
+            android:text="@string/ifse_code"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -173,18 +172,18 @@
                 android:id="@+id/edit_text_ifse_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/account_edit_text_background"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/enter_ifse_code"
-                android:background="@drawable/account_edit_text_background"
                 android:importantForAutofill="no"
                 android:inputType="numberPassword"
-                android:textSize="15sp"
-                android:layout_marginStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"/>
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -192,11 +191,11 @@
             android:id="@+id/textView65"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/account_holder_name"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat"
+            android:text="@string/account_holder_name"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -217,33 +216,33 @@
                 android:id="@+id/edit_text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/account_edit_text_background"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/enter_account_holder_name"
-                android:background="@drawable/account_edit_text_background"
                 android:importantForAutofill="no"
                 android:inputType="numberPassword"
-                android:textSize="15sp"
-                android:layout_marginStart="12dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
                 android:paddingStart="12dp"
-                android:paddingEnd="12dp"/>
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"
+            style="@android:style/Widget.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_blue_background"
+            android:fontFamily="@font/montserrat"
             android:text="@string/next"
             android:textColor="@color/white"
-            style="@android:style/Widget.Button"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
             android:textSize="15sp"
-            android:layout_marginTop="20dp" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 

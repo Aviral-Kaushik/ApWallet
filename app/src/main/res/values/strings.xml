@@ -132,6 +132,16 @@
     <string name="rs_35_000">Rs. 35,000</string>
     <string name="remark">Remark</string>
     <string name="enter_remark_optional">Enter Remark (Optional)</string>
+    <string name="add_money_to_apwallet">Add money to your ApWallet</string>
+    <string name="you_can_also_transfer_funds_directly_from_bank_to_your_apwallet_account">You can also transfer funds directly from bank to your ApWallet account</string>
+    <string name="card_details">Card Details</string>
+    <string name="enter_card_number">Enter Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="enter_card_holder_name">Enter Card Holder Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="xxxx_xxxx_xxxx_6699">XXXX-XXXX-XXXX-6699</string>
+    <string name="date_amp_time"><![CDATA[Date & time]]></string>
+    <string name="_17_06_2023_09_26_57">17-06-2023 09:26:57</string>
     <string-array name="card_type">
         <item>Visa</item>
         <item>Mastercard</item>
